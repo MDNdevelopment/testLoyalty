@@ -18,10 +18,10 @@ export default async function enrollUser(payload) {
       }
     );
     const parsedResponse = await response.json();
-
+    console.log(parsedResponse);
     if (parsedResponse.error) {
       let error;
-      if (parsedResponse.includes("is not valid")) {
+      if (parsedResponse?.includes("is not valid")) {
         error = "El correo electrónico ingresado no es válido.";
       } else {
         error = "Error al registrar usuario, por favor inténtalo de nuevo.";
