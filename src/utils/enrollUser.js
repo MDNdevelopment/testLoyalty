@@ -24,7 +24,7 @@ export default async function enrollUser(payload) {
       if (parsedResponse?.includes("is not valid")) {
         error = "El correo electrónico ingresado no es válido.";
       } else {
-        error = "Error al registrar usuario, por favor inténtalo de nuevo.";
+        error = "Error al registrar usuario, por  favor inténtalo de nuevo.";
       }
       return {
         ...parsedResponse,
